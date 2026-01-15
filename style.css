@@ -1,0 +1,76 @@
+:root {
+  --blu-scuro: #003366;
+  --azzurro: #007ACC;
+  --giallo: #FFCC00;
+  --bianco: #FFFFFF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: var(--bianco);
+  color: #000;
+}
+
+header {
+  background-color: var(--blu-scuro);
+  color: var(--bianco);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--bianco);
+  text-decoration: none;
+}
+
+nav a:focus,
+nav a:hover {
+  outline: 3px solid var(--giallo);
+}
+
+section {
+  padding: 2rem;
+}
+
+button {
+  background-color: var(--giallo);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  outline: 3px solid var(--blu-scuro);
+}
+
+footer {
+  background-color: var(--azzurro);
+  color: var(--bianco);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Skip link per tastiera */
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--giallo);
+  color: #000;
+  padding: 0.5rem;
+}
