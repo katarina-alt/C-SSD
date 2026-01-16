@@ -1,40 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Homepage Accessibile</title>
+  <title>CRAL – Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <a class="skip-link" href="#contenuto">Salta al contenuto principale</a>
 
-<header>
-  <h1>Nome del sito</h1>
-  <nav aria-label="Navigazione principale">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Servizi</a></li>
-      <li><a href="#">Contatti</a></li>
-    </ul>
-  </nav>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+
+    <img
+      src="https://cral.realegroup.eu/wp-content/uploads/2026/01/logo-cral-new_white_100px.png"
+      alt="Logo CRAL Reale Group"
+      class="logo-img"
+      width="110"
+      height="100"
+    />
+
+    <nav aria-label="Navigazione principale">
+      <ul class="menu-principale">
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#club">Club</a></li>
+        <li><a href="#circolari">Circolari</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#prenota">Prenota Attività Sportiva</a></li>
+        <li><a href="#sportswear">Sportswear</a></li>
+        <li><a href="#safeguarding">Safeguarding</a></li>
+      </ul>
+    </nav>
+
+  </div>
 </header>
 
+<!-- MAIN -->
 <main id="contenuto">
-  <section>
-    <h2>Benvenuto</h2>
-    <p>
-      Questo è un esempio di homepage accessibile secondo le linee guida WCAG.
-    </p>
-    <button>Scopri di più</button>
+
+  <!-- SLIDER -->
+  <section class="slider" aria-labelledby="slider-title">
+    <h2 id="slider-title" class="visually-hidden">Novità e iniziative</h2>
+
+    <div class="slider-container" aria-live="polite">
+
+      <div class="slide active">
+        <img src="img/imm2.webp" alt="Iniziative sportive del CRAL">
+        <div class="slide-content">
+          <h3>Attività sportive</h3>
+          <p>Scopri tutte le attività disponibili per i soci CRAL</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/imm1.jpg" alt="Eventi e attività per i soci">
+        <div class="slide-content">
+          <h3>Eventi e iniziative</h3>
+          <p>Partecipa agli eventi organizzati dal CRAL</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="slider-controls">
+      <button id="prev" aria-label="Immagine precedente">◀</button>
+      <button id="next" aria-label="Immagine successiva">▶</button>
+    </div>
   </section>
+
+  <!-- SEZIONI -->
+  <section id="chi-siamo">
+    <h2>Chi siamo</h2>
+    <p>Il CRAL promuove attività sportive, culturali e ricreative.</p>
+  </section>
+
+  <section id="club">
+    <h2>Club</h2>
+    <p>Scopri tutti i club sportivi e ricreativi disponibili.</p>
+  </section>
+
+  <section id="circolari">
+    <h2>Circolari</h2>
+    <p>Consulta le comunicazioni ufficiali del CRAL.</p>
+  </section>
+
+  <section id="prenota">
+    <h2>Prenota Attività Sportiva</h2>
+    <button class="cta">Prenota ora</button>
+  </section>
+
+  <section id="sportswear">
+    <h2>Sportswear</h2>
+    <p>Abbigliamento sportivo ufficiale CRAL.</p>
+  </section>
+
+  <section id="safeguarding">
+    <h2>Safeguarding</h2>
+    <p>Tutela e benessere dei partecipanti.</p>
+  </section>
+
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <p>Email: info@cral.it</p>
+    <p>Telefono: 0123 456789</p>
+  </section>
+
 </main>
 
-<footer>
-  <p>&copy; 2026 – Tutti i diritti riservati</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 CRAL Reale Group</p>
 </footer>
 
+<script src="main.js" defer></script>
 </body>
 </html>

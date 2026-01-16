@@ -2,66 +2,17 @@
   --blu-scuro: #003366;
   --azzurro: #007ACC;
   --giallo: #FFCC00;
-  --bianco: #FFFFFF;
+  --bianco: #ffffff;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  background-color: var(--bianco);
+  font-family: Arial, Helvetica, sans-serif;
   color: #000;
+  line-height: 1.6;
 }
 
-header {
-  background-color: var(--blu-scuro);
-  color: var(--bianco);
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  color: var(--bianco);
-  text-decoration: none;
-}
-
-nav a:focus,
-nav a:hover {
-  outline: 3px solid var(--giallo);
-}
-
-section {
-  padding: 2rem;
-}
-
-button {
-  background-color: var(--giallo);
-  color: #000;
-  border: none;
-  padding: 0.75rem 1.25rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:focus,
-button:hover {
-  outline: 3px solid var(--blu-scuro);
-}
-
-footer {
-  background-color: var(--azzurro);
-  color: var(--bianco);
-  padding: 1rem;
-  text-align: center;
-}
-
-/* Skip link per tastiera */
+/* SKIP LINK */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -71,6 +22,126 @@ footer {
   left: 1rem;
   top: 1rem;
   background: var(--giallo);
-  color: #000;
   padding: 0.5rem;
+}
+
+/* HEADER */
+.header {
+  background: var(--blu-scuro);
+  margin: 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.logo-img {
+  flex-shrink: 0;
+}
+
+.menu-principale {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-principale a {
+  color: var(--bianco);
+  text-decoration: none;
+}
+
+.menu-principale a:focus {
+  outline: 3px solid var(--giallo);
+}
+
+/* SLIDER */
+.slider {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TESTO SOPRA IMMAGINE */
+.slide-content {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(0, 51, 102, 0.85);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  max-width: 70%;
+}
+
+.slider-controls {
+  text-align: center;
+  padding: 1rem;
+}
+
+.slider-controls button {
+  background: var(--giallo);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.slider-controls button:focus {
+  outline: 3px solid var(--blu-scuro);
+}
+
+/* CONTENUTO */
+section {
+  padding: 2rem;
+}
+
+.cta {
+  background: var(--giallo);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.cta:focus {
+  outline: 3px solid var(--blu-scuro);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--blu-scuro);
+  color: var(--bianco);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ACCESSIBILITÀ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
